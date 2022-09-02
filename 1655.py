@@ -7,7 +7,7 @@ lt = []
 rt = []
 
 for i in range(n):
-    m = int(input())
+    m = int(sys.stdin.readline())
     
     if len(lt) == len(rt):
         heapq.heappush(lt, -m)
