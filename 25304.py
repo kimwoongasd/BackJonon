@@ -1,14 +1,11 @@
-total = int(input())
-n = int(input())
+c = int(input())
 
-res = 0
-
-for _ in range(n):
-    a, b = map(int, input().split())
-    
-    res += (a * b)
-    
-if total == res:
-    print("Yes")
-else:
-    print("No")
+for _ in range(c):
+    tem = list(map(int, input().split()))
+    avg = sum(tem[1:]) / tem[0]
+    count = 0
+    for i in range(1, len(tem)):
+        if tem[i] > avg:
+            count += 1
+        
+    print(f"{(count / tem[0]) * 100:.3f}%")
