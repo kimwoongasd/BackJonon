@@ -28,5 +28,4 @@ aa = binary(a)
 bb = binary(b)
 
 c = aa * bb
-print(c)
 print(b_to_number(c))
