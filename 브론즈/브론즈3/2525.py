@@ -8,5 +8,5 @@ if x >= 60:
     x = x % 60
 
 if a >= 24:
-    a = 0
+    a = a % 24
 print(f"{a} {x}")
