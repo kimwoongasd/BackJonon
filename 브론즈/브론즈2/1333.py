@@ -1,15 +1,21 @@
-n, l, d = map(int, input().split())
-tem = [False] * (n * l + 5 * (n - 1))
+n = int(input())
+tem = list(map(int, input().split()))
+s = int(input())
+
+disk = 0
+res = 0
 
 for i in range(n):
-    s = (l + 5) * i
-    for j in range(s, s + l):
-        tem[j] = True
+    if tem[i] == 0:
+        disk = 0
+    elif tem[i] <= s:
+        disk = s
+    else:
+        if tem[i] % s == 0:
+            disk = s * (tem[i] // s)
+        else:
+            disk = s * (tem[i] // s + 1)
     
-    res = 0
-    while res < len(tem):
-        if not tem[res]:
-            break
-        res += d
-        
+    res += disk
+
 print(res)
