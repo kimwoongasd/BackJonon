@@ -1,6 +1,16 @@
-a, b, c = map(int, input().split())
+m = int(input())
+n = int(input())
 
-if c <= b:
-    print(-1)
+tem = []
+res = 0
+f = False
+for i in range(m , n + 1):
+    if i % (i ** (1/2)) == 0:
+        tem.append(i)
+        res += i
+        f = True
+if f:     
+    print(res)
+    print(min(tem))
 else:
-    print(int(a / (c - b)) + 1)
+    print(-1)
