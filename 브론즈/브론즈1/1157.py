@@ -1,6 +1,6 @@
-tem = list(map(str, input()))
+tem = list(map(str, input().upper()))
 
-num = [0] * 50
+num = [0] * 26
 
 for x in tem:
     num[ord(x) - 65] += 1
@@ -8,7 +8,7 @@ for x in tem:
 m = max(num)
 count = 0
 res = 0
-for y in range(50):
+for y in range(26):
     if m == num[y]:
         count += 1
         res = y
@@ -17,4 +17,4 @@ for y in range(50):
         print("?")
         exit()
         
-print(num[res])
+print(chr(res + 65))
