@@ -1,8 +1,9 @@
+import sys
 n = int(input())
 count = 0
 for i in range(n):
     tmp = []
-    a = input()
+    a = sys.stdin.readline().strip()
     for x in a:
         if len(tmp) == 0:
             tmp.append(x)
