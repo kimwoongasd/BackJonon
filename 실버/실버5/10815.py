@@ -10,12 +10,16 @@ for x in a:
     if x >= 0:
         tem_1[x] = 1
     else:
-        x = abs(x)
-        tem_2[x] = 1
-
+        tem_2[abs(x)] = 1
+        
 for y in b:
-    y = abs(y)
-    if tem_1[y] == 1 or tem_2[y] == 1:
-        print(1, end=" ")
+    if y >= 0:
+        if tem_1[y] == 1:
+            print(1, end=" ")
+        else:
+            print(0, end=" ")
     else:
-        print(0, end=" ")
+        if tem_2[abs(y)] == 1:
+            print(1, end=" ")
+        else:
+            print(0, end=" ")
