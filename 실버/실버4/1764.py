@@ -4,10 +4,10 @@ n, m = map(int, sys.stdin.readline().split())
 a = set()
 b = set()
 for i in range(n):
-    a.add(sys.stdin.readline())
+    a.add(sys.stdin.readline().strip())
     
 for j in range(m):
-    b.add(sys.stdin.readline())
+    b.add(sys.stdin.readline().strip())
 res = sorted(list(a & b))
 
 print(len(res))
