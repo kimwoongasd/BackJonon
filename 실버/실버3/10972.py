@@ -7,6 +7,6 @@ for i in range(n - 1, 0, -1):
             if tem[i - 1] < tem[j]:
                 tem[i - 1], tem[j] = tem[j], tem[i - 1]
                 tem = tem[:i] + sorted(tem[i:])
-                print(tem)
+                print(*tem)
                 exit(0)
 print(-1)
