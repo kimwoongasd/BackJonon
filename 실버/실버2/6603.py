@@ -22,3 +22,16 @@ while True:
         res = [0] * 6
         dfs(1, 0)
         print()
+        
+# 함수 사용
+# from itertools import combinations
+
+# while True:
+#     tem = list(map(int, input().split()))
+#     n = tem.pop(0)
+#     if n == 0:
+#         break
+    
+#     for x in combinations(tem, 6):
+#         print(*x)
+#     print()
