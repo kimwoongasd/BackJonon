@@ -21,6 +21,7 @@ dfs(1)
 for x in range(2, n + 1):
     print(ch[x])
 
+# 시간초과
 # dq = deque()
 # dq.append(1)
 

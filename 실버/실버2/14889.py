@@ -1,3 +1,4 @@
+# pyp3로 풀림
 import sys
 sys.setrecursionlimit(10**6)
 def dfs(L, s):
