@@ -1,0 +1,62 @@
+n = int(input())
+arr = []
+for i in range(n):
+    a = list(map(int, input().split()))
+    arr.append(a)
+    
+ch = [[0] * n for _ in range(n)]
+ch[0][0] = 1
+
+for i in range(n):
+    for j in range(n):
+        if i == n - 1 and j == n - 1:
+            print(ch[i][j])
+            exit(0)
+        
+        if i + arr[i][j] < n:
+            ch[i + arr[i][j]][j] += ch[i][j]
+        
+        if j + arr[i][j] < n:
+            ch[i][j + arr[i][j]] += ch[i][j]
+            
+# 다른 풀이
+# import sys
+# input = sys.stdin.readline
+# def dfs(x, y):
+#     if x == n - 1 and y == n - 1:
+#         return 1
+#     if dp[x][y] == -1:
+#         dp[x][y] = 0
+#         x1, y1 = x + s[x][y], y
+#         x2, y2 = x, y + s[x][y]
+#         if 0 <= x1 < n and 0 <= y1 < n: dp[x][y] += dfs(x1, y1)
+#         if 0 <= x2 < n and 0 <= y2 < n: dp[x][y] += dfs(x2, y2)
+#     return dp[x][y]
+# n = int(input())
+# s = [list(map(int, input().split())) for i in range(n)]
+# dp = [[-1] * n for i in range(n)]
+# print(dfs(0, 0))
+
+# 시간 초과
+# def dfs(x, y):
+#     global count
+#     if arr[x][y] == 0:
+#         count += 1
+        
+#     else:
+#         dx = x + arr[x][y]
+#         dy = y + arr[x][y]
+#         if 0 <= dx < n:
+#             dfs(dx, y)
+#         if  0 <= dy < n:
+#             dfs(x, dy)
+
+# n = int(input())
+# arr = []
+# for i in range(n):
+#     a = list(map(int, input().split()))
+#     arr.append(a)
+    
+# count = 0
+# dfs(0, 0)
+# print(count)
