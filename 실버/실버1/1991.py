@@ -23,6 +23,7 @@ def postorder(root):
 
 n = int(input())
 # 사전을 활용하여 root를 key로 left, right를 value로 할당
+# 위의 힌트로 풀수있었다
 tree = {}
 for i in range(n):
     root, lt, rt = sys.stdin.readline().strip().split()
