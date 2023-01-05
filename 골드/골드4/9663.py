@@ -15,7 +15,7 @@ def is_promising(x):
     return True
 
 def n_queens(x):
-    global ans
+    global res
     # 마지막 까지 탐색 완료
     if x == n:
         res += 1
