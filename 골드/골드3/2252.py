@@ -1,6 +1,6 @@
 from collections import deque
 
-# 우싱 정렬
+# 위상 정렬
 n, m = map(int, input().split())
 arr = [[] for _ in range(n + 1)]
 ch = [0] * (n + 1)
