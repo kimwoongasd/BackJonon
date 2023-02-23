@@ -19,7 +19,7 @@ def dijkstra(start):
 
 n = int(input())
 m = int(input())
-arr = [[] * (n + 1)]
+arr = [[] for _ in range(n + 1)]
 for _ in range(m):
     a, b, c = map(int, input().split())
     arr[a].append((b, c))
