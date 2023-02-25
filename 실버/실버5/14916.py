@@ -7,4 +7,8 @@ while n > 0:
     else:
         n -= 2
         cnt += 1
-print(cnt)
+        
+if n < 0:
+    print(-1)
+else:
+    print(cnt)
