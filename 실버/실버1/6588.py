@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 ch = [0] * 1000001
 for i in range(2, 1000001):
     if ch[i] == 0:
