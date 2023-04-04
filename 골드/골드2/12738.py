@@ -32,7 +32,7 @@ for i in range(1, n):
     if arr[i] > ch[-1]:
         ch.append(arr[i])
     else:
-        ch[binary_search(0, n, arr[i])] - arr[i]
+        ch[binary_search(0, len(ch) - 1, arr[i])] = arr[i]
 
 print(len(ch))
 
